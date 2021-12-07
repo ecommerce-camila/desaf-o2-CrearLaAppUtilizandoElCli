@@ -7,6 +7,9 @@ function App() {
       <center>
       <NavBar />
       <ItemListContainer greeting='Tenemos variedad de productos' />
+      <h1>
+        soy un texto
+      </h1>
       </center>
 
   )
