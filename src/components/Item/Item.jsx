@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Item = () =>{
+const Item = ({ item }) =>{
     return (
-        <div>item</div>
-    )
+        <div>
+            <img src={item.img} alt="producto" />
+            <p>$ {item.price}</p>
+        </div>
+    );
 };
-
 export default Item;

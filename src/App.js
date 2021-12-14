@@ -1,19 +1,17 @@
+import './App.css';
 import NavBar from "./components/NavBar/NavBar";
-import ItemCount from "./components/itemCount";
-import ItemListContainer from "./components/ItemListContainer/itemListContainer";
-import "./styles/styles.css";
 import Contador from "./components/itemCount";
+import ItemListContainer from './components/Item/ItemListContainer';
+import ItemList from "./components/Item/ItemList";
 
 function App() {
   return (
-      <center>
+      <div>
       <NavBar />
       <Contador />
-      <ItemListContainer greeting='Tenemos variedad de productos' />
-        <h1>
-          soy un texto
-        </h1>
-      </center>
+      <ItemList />
+      <ItemListContainer saludo='Bienvenidos a nuestra tienda online' />
+      </div>
 
   );
 }
