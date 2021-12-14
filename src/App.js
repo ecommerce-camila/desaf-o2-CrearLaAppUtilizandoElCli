@@ -15,7 +15,7 @@ function App() {
         </h1>
       </center>
 
-  )
+  );
 }
 
 export default App;
