@@ -18,7 +18,4 @@ export default function Contador() {
             <div>{ contador }</div>
         </div>
     );
-
-
-
 };

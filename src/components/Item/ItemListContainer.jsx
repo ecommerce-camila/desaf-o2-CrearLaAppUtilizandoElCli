@@ -1,27 +1,35 @@
-import React, {useState} from 'react'
-import { products } from './Items';
+import React, { useState, useEffect } from 'react';
+import { products } from './items';
+import ItemList from './ItemList';
 
 const ItemListContainer = ({ saludo }) => {
     const [items, setItems] = useState([]);
 
-    const traerProductos = new Promise ((revolse, reject)=>{
-        setTimeout(() => {
-            resolve(products)
-        }, 1000);
-    });
-    traerProductos
-    .then((res) => {
-        setItems(res);
-    })
-    .catch((error)=>{
-        console.log(error)
-    })
+    useEffect(() => {
+        const traerProductos = new Promise ((resolve, reject) => {
+            setTimeout(() => {
+                resolve(products);
+            }, 2000);
+        });
+        traerProductos
+            .then((res) => {
+                setItems(res);
+            })
+            .catch((error)=>{
+                console.log(error);
+            });
+    },  []);
+    
     return (
         <>
             <h1>{saludo}</h1>
-            <Itemlist items={items} />
-        </>
-    );
-};
 
+            {items?.length === 0 ? (
+                <h1>cargando...</h1>
+            ) : (
+                <ItemList items={items} />
+            )}
+        </>  
+    );
+};    
 export default ItemListContainer;
