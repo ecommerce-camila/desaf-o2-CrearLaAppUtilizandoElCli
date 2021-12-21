@@ -1,3 +1,5 @@
+import ItemCount from '../ItemCount';
+
 const ItemDetail = ({ item }) => {
     console.log("El item", item);
     return (
