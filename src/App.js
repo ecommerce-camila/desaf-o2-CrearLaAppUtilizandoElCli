@@ -8,7 +8,7 @@ function App() {
       <div>
       <NavBar />
       <ItemDetailContainer />
-      <ItemListContainer saludo='Bienvenidos a nuestra tienda online' />
+      <ItemListContainer saludo = 'Te brindamos la mejor atención'/>
       </div>
 
   );

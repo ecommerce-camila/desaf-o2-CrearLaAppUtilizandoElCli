@@ -8,7 +8,7 @@ const NavBar = () => {
             <Navbar bexpand="lg">
             <Container>
                 <img
-                    src="/logo.png"
+                    src="img/logo.png"
                     width="150"
                     height="150"
                     className="d-inline-block align-top"

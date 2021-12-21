@@ -1,8 +1,7 @@
 const oneProduct = {
     id: 1,
-    image:
-      "https://images-na.ssl-images-amazon.com/images/I/616VM20%2BAzL.__AC_SY300_SX300_QL70_ML2_.jpg",
-    title: "Ryzen 5900x",
+    image: "img/F1.png",
+    title: "",
     descripcion: "este es el primer producto",
     categoria: "Procesadores",
     price: "73000",

@@ -2,12 +2,12 @@ import React from 'react';
 
 const Item = ({ product }) => {
     return (
-      <div className="flex bg-info">
+      <div className="flex bg-black">
         <h3>{product.title}</h3>
-        <h2>{product.price}</h2>
-        <p>{product.description}</p>
-        <p>{product.stock}</p>
-        <img src={product.img} alt={product.name} />
+        <h2 class="text-warning">{product.price}</h2>
+        <p class="text-warning">{product.description}</p>
+        <p class="text-warning">{product.stock}</p>
+        <img class="mx-auto d-block" src={product.img} alt={product.name}  width="190" height="190"/>
       </div>
     );
   };

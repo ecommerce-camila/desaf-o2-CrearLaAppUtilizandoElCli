@@ -1,31 +1,27 @@
 export const products = [
     {
         name: 'Celular',
-        price: 30000,
-        stock: 5,
+        description: 'Celular Samsung A32 Blanco',
+        price: "$43.999",
+        stock: "5 unidades",
         id: 1,
-        img: 'img/cel1.jpg',
+        img: 'img/cel1.png',
     },
     {
         name: 'Celular',
-        price: 35000,
-        stock: 8,
+        description: 'Celular Samsung Galaxy A52 128GB+6GB',
+        price: "$54.000",
+        stock: "8 unidades",
         id: 1,
-        img: 'img/cel2.jpg',
+        img: 'img/cel2.png',
     },
     {
         name: 'Celular',
-        price: 45000,
-        stock: 5,
+        description: 'Celular Galaxy S20 Fan Edition Azul',
+        price: "$90.000",
+        stock: "5 unidades",
         id: 1,
-        img: 'img/cel3.jpg',
-    },
-    {
-        name: 'Celular',
-        price: 40000,
-        stock: 3,
-        id: 1,
-        img: 'img/cel4.jpg',
+        img: 'img/cel3.png',
     },
    
 ];

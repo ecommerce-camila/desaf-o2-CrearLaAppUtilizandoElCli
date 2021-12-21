@@ -22,10 +22,10 @@ const ItemListContainer = ({ saludo }) => {
     
     return (
         <>
-            <h1>{saludo}</h1>
+            <h5>{saludo}</h5>
 
             {items?.length === 0 ? (
-                <h1>cargando...</h1>
+                <h6>cargando...</h6>
             ) : (
                 <ItemList items={items} />
             )}

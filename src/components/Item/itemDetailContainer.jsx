@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import getOneProduct from "../../services/getOneProduct";
+import getOneProduct from "../../services/getOneProducts";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <h1>ACA VA EL ITEMDETAILCONTAINER</h1>
+      <h6 class="text-muted">aca va el itemdetailcontainer</h6>
       <ItemDetail item={item} />
     </div>
   );
