@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Item = ({ description, price, stock, title }) => {
+const Item = ({ product }) => {
     return (
       <div className="flex bg-info">
-        <h3>{title}</h3>
-        <h2>{price}</h2>
-        <p>{description}</p>
-        <p>{stock}</p>
+        <h3>{product.title}</h3>
+        <h2>{product.price}</h2>
+        <p>{product.description}</p>
+        <p>{product.stock}</p>
+        <img src={product.img} alt={product.name} />
       </div>
     );
   };
