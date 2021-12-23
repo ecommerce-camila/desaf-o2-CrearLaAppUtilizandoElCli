@@ -1,35 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { products } from './items';
 import ItemList from './ItemList';
+import { useParams } from 'react-router';
 
-const ItemListContainer = ({ saludo }) => {
+const ItemListContainer = ({saludo}) => {
     const [items, setItems] = useState([]);
+    const { id } = useParams();
 
-    const { idCate } = useParams()
+    console.log(id);
 
     useEffect(() => {
-        const traerProductos = new Promise ((resolve, reject) => {
+        const traerProductos = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(products);
             }, 2000);
         });
         traerProductos
-        if (idCate) {
-            getFech
-            .then((res => setProductos(res.filter(prod => prod.categoria === idCate)))),
-                setItems(res)
-            .catch((error => console.log(error)));
-        }    else {
-            getFech
-            .then((res => setProductos(res))),
-            setItems(res)
-            .catch((error => console.log(error)))
-        }
-    }, [idCate])
+            .then((res) => {
+                const categorias = res.filter((i) => i.category === `${id}`);
+                id === undefined ? setItems(res) : setItems(categorias);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, [id]);
 
-    
-    console.log(idCate)
 
     return (
         <>

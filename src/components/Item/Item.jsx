@@ -8,7 +8,8 @@ const Item = ({ product }) => {
         <p class="text-warning">{product.description}</p>
         <p class="text-warning">{product.stock}</p>
         <img class="mx-auto d-block" src={product.img} alt={product.name}  width="190" height="190"/>
-      
+        <button type="button" class="btn btn-warning">Ver detalle del producto</button>
+
       
       
       
