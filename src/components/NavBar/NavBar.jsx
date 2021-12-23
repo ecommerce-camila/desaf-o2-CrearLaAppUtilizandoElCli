@@ -1,3 +1,5 @@
+// import {Navbar, Container, Nav} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import Content from "./content";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import CartWidget from "./CartWidget";
@@ -14,23 +16,16 @@ const NavBar = () => {
                     className="d-inline-block align-top"
                     alt="React Bootstrap logo"
                 />
-                <Navbar.Brand href="#home"></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#contact">Contacto</Nav.Link>
-                    <NavDropdown title="Lista de Secciones" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Celulares</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Auriculares</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Computadoras</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Sucursales</NavDropdown.Item>
-                    </NavDropdown>
-
-                </Nav>
-                </Navbar.Collapse>
-                <CartWidget />
+                <Link to="/">Home</Link>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Link to="/categoria/celulares">Celulares</Link>
+                        <Link to="/categoria/notebooks">Notebooks</Link>
+                        <CartWidget />
+                    </Nav>
+                    </Navbar.Collapse>
+                    <Link to="/cart" >Carrito</Link> 
             </Container>
             </Navbar>
             <Content />
