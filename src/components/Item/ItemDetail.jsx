@@ -1,7 +1,7 @@
 import {useState, useContext} from 'react'
 import Counter from "../Counter";
-import { Col, Row} from "react-bootstrap";
 import { CartContext } from '../../context/CartContext';
+import { item } from "../Item/items";
 
 function ItemDetail({prod}) {
     const [count, setCount] = useState(0)
