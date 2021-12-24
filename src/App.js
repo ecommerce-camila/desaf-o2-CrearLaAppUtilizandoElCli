@@ -1,19 +1,19 @@
-import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import NavBar from "./components/NavBar/NavBar";
-import ItemDetailContainer from "./components/Item/itemDetailContainer";
 import ItemListContainer from './components/Item/ItemListContainer';
+import ItemDetailContainer from './components/Item/ItemDetailContainer';
+import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter as Router, Routes, Route, CartProvider } from 'react';
 import Cart from './components/Cart';
 
+
 function App() {
-  return (
-      <BrowserRouter>
-          <Router>
+    return (
+        <CartProvider>
+            <Router>
                 <NavBar />
                 <Routes>
                     <Route path="/" element={<ItemListContainer />} />
                     <Route
-                        path="/categoria/:id"
+                        path="/category/:id"
                         element={<ItemListContainer />}
                     />
                     <Route path="/item/:id" element={<ItemDetailContainer />} />
@@ -21,8 +21,8 @@ function App() {
                     <Route path="/cart" element={<Cart />} />
                 </Routes>
             </Router>
-      </BrowserRouter>
-  );
+        </CartProvider>
+    );
 }
 
 export default App;

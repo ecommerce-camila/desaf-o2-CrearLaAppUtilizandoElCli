@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { products } from './items';
 import ItemList from './ItemList';
+import { products } from './items';
 import { useParams } from 'react-router';
 
-const ItemListContainer = ({saludo}) => {
+const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const { id } = useParams();
 
@@ -25,17 +25,11 @@ const ItemListContainer = ({saludo}) => {
             });
     }, [id]);
 
-
     return (
         <>
-            <h5>{saludo}</h5>
-
-            {items?.length === 0 ? (
-                <h6>cargando...</h6>
-            ) : (
-                <ItemList items={items} />
-            )}
-        </>  
+            <ItemList items={items} />
+        </>
     );
-};    
+};
+
 export default ItemListContainer;

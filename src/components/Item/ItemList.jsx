@@ -2,13 +2,22 @@ import React from 'react';
 import Item from './Item';
 
 const ItemList = ({ items }) => {
-  //console.log("Los products", products);
-  return (
-    <div>
-          {items?.map((product) =>{
-              return <Item key={product.id} product={product} />;
-          })}
-    </div>
-  );
+    return (
+        <>
+            <div
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    maxWidth: '80%',
+                    margin: '0 auto',
+                }}
+            >
+                {items.map((item) => (
+                    <Item key={item.id} {...item} />
+                ))}
+            </div>
+        </>
+    );
 };
+
 export default ItemList;

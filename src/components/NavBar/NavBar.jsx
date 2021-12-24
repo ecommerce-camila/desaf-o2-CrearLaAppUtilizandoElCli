@@ -1,35 +1,51 @@
-// import {Navbar, Container, Nav} from 'react-bootstrap'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Content from "./content";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import CartWidget from "./CartWidget";
 
-const NavBar = () => {
-    return(
-        <div>
-            <Navbar bexpand="lg">
-            <Container>
-                <img
-                    src="img/logo.png"
-                    width="150"
-                    height="150"
-                    className="d-inline-block align-top"
-                    alt="React Bootstrap logo"
-                />
-                <Link to="/">Home</Link>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Link to="/categoria/celulares">Celulares</Link>
-                        <Link to="/categoria/notebooks">Notebooks</Link>
-                        <CartWidget />
-                    </Nav>
-                    </Navbar.Collapse>
-                    <Link to="/cart" >Carrito</Link> 
-            </Container>
-            </Navbar>
-            <Content />
-        </div>
-    )    
+const Navbar = () => {
+    return (
+        <nav
+            style={{
+                backgroundColor: 'Black',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '10px',
+            }}
+        >
+            <Link to="/">
+                <h2>Inicio</h2>
+            </Link>
+            <ul
+                style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    listStyle: 'none',
+                }}
+            >
+                <li
+                    style={{
+                        margin: '0px 10px',
+                    }}
+                >
+                    <Link to="/category/celulares">Celulares</Link>
+                </li>
+                <li
+                    style={{
+                        margin: '0px 10px',
+                    }}
+                >
+                    <Link to="/category/notebooks">Notebooks</Link>
+                </li>
+                <li
+                    style={{
+                        margin: '0px 10px',
+                    }}
+                >
+                    <Link to="/cart">Carrito</Link>
+                </li>
+            </ul>
+        </nav>
+    );
 };
-export default NavBar;
+
+export default Navbar;
