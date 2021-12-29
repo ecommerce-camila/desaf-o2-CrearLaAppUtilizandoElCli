@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
 import { products } from './items';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -30,6 +30,36 @@ const ItemListContainer = () => {
             <ItemList items={items} />
         </>
     );
-};
+    //ejemplo de evento
+    const handleClick=(e)=>{
+        e.preventDefault() 
+        setBool(!bool)
+    }
 
-export default ItemListContainer;
+    const handleAgregar=()=>{
+        setItems([
+            ...items,
+            { name: 'Celular',
+            description: 'Celular Samsung A32 Blanco',
+            price: "$43.999",
+            stock: 5,
+            id: 1,
+            img: 'img/cel1.png',
+            category: 'celulares' }
+        ])
+    }
+
+    console.log(bool);
+    console.log('itemListContainer');
+
+    return (
+        <>
+            <button onClick={handleClick}>Cambiar estado </button>           
+            <button onClick={handleAgregar}>Agregar Item </button>           
+            <ItemList items={items} />
+            {/* <button onKeyDown={handleClick} >click</button> */}
+        </>
+    )
+    }
+
+    export default ItemListContainer;
